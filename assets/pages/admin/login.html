@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Login</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="admin-login">
+    <main class="admin-container">
+      <div class="admin-login-box">
+        <h2 class="h2">Admin Login</h2>
+
+        <form action="#" method="post" class="admin-form" id="loginForm">
+          <div class="input-wrapper">
+            <label for="email" class="input-label">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="Enter your email"
+              class="input-field"
+            />
+          </div>
+
+          <div class="input-wrapper">
+            <label for="password" class="input-label">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              required
+              placeholder="Enter your password"
+              class="input-field"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            style="width: 100%; margin-top: 20px"
+          >
+            Login
+          </button>
+        </form>
+
+        <div class="message" style="margin-top: 20px; display: none">
+          <!-- Error/success messages will appear here -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Ionicon -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../../js/admin/login.js"></script>
+  </body>
+</html>

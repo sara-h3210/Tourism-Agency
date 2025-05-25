@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img src="/assets/images/logo.jpg" alt="Tourly Logo" class="logo" />
+          <h2>Admin</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li class="active">
+              <a href="dashboard.html">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="tours.html">
+                <i class="fas fa-suitcase"></i>
+                <span>Tour Packages</span>
+              </a>
+            </li>
+            <li>
+              <a href="destinations.html">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>Destinations</span>
+              </a>
+            </li>
+            <li>
+              <a href="booking.html">
+                <i class="fas fa-calendar-check"></i>
+                <span>Bookings</span>
+              </a>
+            </li>
+            <li>
+              <a href="customer.html">
+                <i class="fas fa-users"></i>
+                <span>Customers</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="admin-profile">
+            <img src="/assets/images/gallery-1.jpg" alt="Admin Avatar" />
+            <div>
+              <h4>Sarah</h4>
+              <p>Administrator</p>
+            </div>
+          </div>
+          <a href="#" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="main-header">
+          <div class="header-left">
+            <button class="menu-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1>Dashboard Overview</h1>
+          </div>
+          <div class="header-right">
+            <div class="search-box">
+              <input type="text" placeholder="Search..." />
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="notifications">
+              <i class="fas fa-bell"></i>
+              <span class="badge">3</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Dashboard Widgets -->
+        <section class="dashboard-widgets">
+          <div class="widget">
+            <div class="widget-icon" style="background-color: #4caf50">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="widget-info">
+              <h3>Total Bookings</h3>
+              <p>1,248</p>
+              <span class="positive">+12% this month</span>
+            </div>
+          </div>
+
+          <div class="widget">
+            <div class="widget-icon" style="background-color: #2196f3">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+            <div class="widget-info">
+              <h3>Revenue</h3>
+              <p>$84,750</p>
+              <span class="positive">+8% this month</span>
+            </div>
+          </div>
+
+          <div class="widget">
+            <div class="widget-icon" style="background-color: #ff9800">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="widget-info">
+              <h3>New Customers</h3>
+              <p>187</p>
+              <span class="positive">+5% this month</span>
+            </div>
+          </div>
+
+          <div class="widget">
+            <div class="widget-icon" style="background-color: #f44336">
+              <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <div class="widget-info">
+              <h3>Pending Requests</h3>
+              <p>23</p>
+              <span class="negative">-3% this month</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Recent Bookings Table -->
+        <section class="dashboard-section">
+          <div class="section-header">
+            <h2>Recent Bookings</h2>
+            <a href="/dashboard/booking.html" class="view-all">View All</a>
+          </div>
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Customer</th>
+                  <th>Package</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#TL-1001</td>
+                  <td>
+                    <img src="images/abdullah.png" alt="Client" />
+                    John Smith
+                  </td>
+                  <td>Maldives Luxury Escape</td>
+                  <td>15 Jun 2023</td>
+                  <td>$3,500</td>
+                  <td><span class="status confirmed">Confirmed</span></td>
+                  <td>
+                    <button class="action-btn view">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="action-btn edit">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#TL-1002</td>
+                  <td>
+                    <img src="../assets/images/client-2.jpg" alt="Client" />
+                    Emma Wilson
+                  </td>
+                  <td>Himalayan Trekking</td>
+                  <td>18 Jun 2023</td>
+                  <td>$1,250</td>
+                  <td><span class="status pending">Pending</span></td>
+                  <td>
+                    <button class="action-btn view">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="action-btn edit">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#TL-1003</td>
+                  <td>
+                    <img src="../assets/images/client-3.jpg" alt="Client" />
+                    Michael Chen
+                  </td>
+                  <td>Egyptian History Tour</td>
+                  <td>20 Jun 2023</td>
+                  <td>$2,300</td>
+                  <td><span class="status confirmed">Confirmed</span></td>
+                  <td>
+                    <button class="action-btn view">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="action-btn edit">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#TL-1004</td>
+                  <td>
+                    <img src="../assets/images/client-4.jpg" alt="Client" />
+                    Sarah Johnson
+                  </td>
+                  <td>Santorini Romantic</td>
+                  <td>22 Jun 2023</td>
+                  <td>$2,800</td>
+                  <td><span class="status cancelled">Cancelled</span></td>
+                  <td>
+                    <button class="action-btn view">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="action-btn edit">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#TL-1005</td>
+                  <td>
+                    <img src="../assets/images/client-5.jpg" alt="Client" />
+                    David Brown
+                  </td>
+                  <td>Japan Family Adventure</td>
+                  <td>25 Jun 2023</td>
+                  <td>$1,950</td>
+                  <td><span class="status confirmed">Confirmed</span></td>
+                  <td>
+                    <button class="action-btn view">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="action-btn edit">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="dashboard-section">
+          <div class="section-header">
+            <h2>Performance Analytics</h2>
+            <div class="time-filter">
+              <button class="active">Weekly</button>
+              <button>Monthly</button>
+              <button>Yearly</button>
+            </div>
+          </div>
+          <div class="chart-container">
+            <div class="chart-card">
+              <h3>Booking Trends</h3>
+              <div class="chart-placeholder">
+                <!-- Chart would be rendered here with Chart.js or similar -->
+                <img
+                  src="../assets/images/booking-chart.png"
+                  alt="Booking Chart"
+                />
+              </div>
+            </div>
+            <div class="chart-card">
+              <h3>Revenue Analysis</h3>
+              <div class="chart-placeholder">
+                <!-- Chart would be rendered here with Chart.js or similar -->
+                <img
+                  src="../assets/images/revenue-chart.png"
+                  alt="Revenue Chart"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      // Simple toggle for mobile menu
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".sidebar").classList.toggle("collapsed");
+          document.querySelector(".main-content").classList.toggle("expanded");
+        });
+    </script>
+  </body>
+</html>

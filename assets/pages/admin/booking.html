@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookings | Admin</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img src="/assets/images/logo.jpg" alt="Tourly Logo" class="logo" />
+          <h2>Admin</h2>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a
+              >
+            </li>
+            <li>
+              <a href="tours.html">
+                <i class="fas fa-suitcase"></i> <span>Tour Packages</span></a
+              >
+            </li>
+            <li>
+              <a href="destinations.html"
+                ><i class="fas fa-map-marked-alt"></i> <span>Destinations</span
+                ><!-- Destinations link --></a
+              >
+            </li>
+            <li class="active">
+              <a href="booking.html">
+                <i class="fas fa-calendar-check"></i>
+                <span>Bookings</span>
+              </a>
+            </li>
+            <li>
+              <a href="customer.html">
+                <i class="fas fa-users"></i>
+                <span>Customers</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="admin-profile">
+            <img src="/assets/images/hero-banner.jpg" alt="Admin Avatar" />
+            <div>
+              <h4>Sarah</h4>
+              <p>Administrator</p>
+            </div>
+          </div>
+          <a href="#" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="main-header">
+          <div class="header-left">
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <h1>Bookings</h1>
+          </div>
+          <div class="header-right">
+            <div class="filter-dropdown">
+              <select id="status-filter">
+                <option value="all">All Status</option>
+                <option value="confirmed">Confirmed</option>
+                <option value="pending">Pending</option>
+                <option value="cancelled">Cancelled</option>
+              </select>
+            </div>
+            <!-- Search and notifications -->
+          </div>
+        </header>
+
+        <!-- Bookings Section -->
+        <section class="dashboard-section">
+          <div class="section-header">
+            <h2>Recent Bookings</h2>
+            <div class="date-filter">
+              <input type="date" id="start-date" />
+              <span>to</span>
+              <input type="date" id="end-date" />
+              <button class="btn-secondary" id="date-filter-btn">Filter</button>
+              <button class="btn-secondary" id="reset-filters-btn">
+                Reset
+              </button>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="booking-table">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Customer</th>
+                  <th>Package</th>
+                  <th>Booking Date</th>
+                  <th>Travel Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="bookings-table-body"></tbody>
+            </table>
+            <div class="pagination">
+              <button id="prev-page" disabled>
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <span id="page-info">Page 1 of 1</span>
+              <button id="next-page" disabled>
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../../js/admin/booking.js"></script>
+  </body>
+</html>

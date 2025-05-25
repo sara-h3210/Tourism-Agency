@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destinations | Admin</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img src="/assets/images/logo.jpg" alt="Tourly Logo" class="logo" />
+          <h2>Admin</h2>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="tours.html">
+                <i class="fas fa-suitcase"></i>
+                <span>Tour Packages</span></a
+              >
+            </li>
+            <li class="active">
+              <a href="destinations.html"
+                ><i class="fas fa-map-marked-alt"></i>
+                <span>Destinations</span></a
+              >
+            </li>
+            <li>
+              <a href="booking.html">
+                <i class="fas fa-calendar-check"></i>
+                <span>Bookings</span>
+              </a>
+            </li>
+            <li>
+              <a href="customer.html">
+                <i class="fas fa-users"></i>
+                <span>Customers</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="admin-profile">
+            <img src="/assets/images/hero-banner.jpg" alt="Admin Avatar" />
+            <div>
+              <h4>Sarah</h4>
+              <p>Administrator</p>
+            </div>
+          </div>
+          <a href="#" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="main-header">
+          <div class="header-left">
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <h1>Destinations</h1>
+          </div>
+          <div class="header-right">
+            <div class="search-box">
+              <input type="text" placeholder="Search..." />
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="notifications">
+              <i class="fas fa-bell"></i>
+              <span class="badge">3</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Destinations Section -->
+        <section class="dashboard-section">
+          <div class="section-header">
+            <h2>All Destinations</h2>
+            <button class="btn-primary">
+              <i class="fas fa-plus"></i> Add Destination
+            </button>
+          </div>
+
+          <div class="cards-grid"></div>
+
+          <!-- Modal for Adding Destination -->
+          <div class="modal" id="addDestinationModal">
+            <div class="modal-content">
+              <span class="close-btn" id="closeModal">&times;</span>
+              <h2>Add New Destination</h2>
+              <br />
+              <form id="destinationForm" autocomplete="on">
+                <label for="destinationImage">Destination Image:</label>
+                <input
+                  type="file"
+                  id="destinationImage"
+                  name="destinationImage"
+                  accept="image/*"
+                  autocomplete="off"
+                />
+                <div id="imagePreview">
+                  <img id="previewImage" src="#" alt="Preview" />
+                </div>
+
+                <label for="destinationName">Destination Name:</label>
+                <input
+                  type="text"
+                  id="destinationName"
+                  name="destinationName"
+                  required
+                  autocomplete="organization"
+                />
+
+                <label for="country">Country:</label>
+                <input
+                  type="text"
+                  id="country"
+                  name="country"
+                  required
+                  autocomplete="country-name"
+                />
+
+                <label for="description">Description:</label>
+                <textarea
+                  id="description"
+                  name="description"
+                  rows="3"
+                  required
+                  autocomplete="off"
+                ></textarea>
+
+                <label for="destinationStatus">Status:</label>
+                <select
+                  id="destinationStatus"
+                  name="destinationStatus"
+                  required
+                  autocomplete="off"
+                >
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
+                </select>
+
+                <button type="submit">Add Destination</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div id="notification-container" class="notification-container"></div>
+    <script src="/assets/js/admin/destinations.js"></script>
+  </body>
+</html>
