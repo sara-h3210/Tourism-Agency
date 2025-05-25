@@ -50,14 +50,19 @@
           </a>
 
           <a href="#" class="logo">
-            <img src="../../" alt="Tourly logo" />
+            <img src="/assets/images/logo.svg" alt="Tourly logo" />
           </a>
 
           <div class="header-btn-group">
             <button class="search-btn" aria-label="Search">
               <ion-icon name="search"></ion-icon>
             </button>
-
+            <button class="login-btn" aria-label="Admin Login" onclick="window.location.href='/assets/pages/admin/login.html'">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+              <span class="login-text">Login</span>
+            </button>
+          
+            <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
             <button
               class="nav-open-btn"
               aria-label="Open Menu"
@@ -94,7 +99,7 @@
           <nav class="navbar" data-navbar>
             <div class="navbar-top">
               <a href="#" class="logo">
-                <img src="./assets/images/logo-blue.svg" alt="Tourly logo" />
+                <img src="/assets/images/logo-blue.svg" alt="Tourly logo" />
               </a>
 
               <button
@@ -139,12 +144,12 @@
             </ul>
           </nav>
 
-          <button
-            class="btn btn-primary"
-            onclick="window.location.href='book.html'"
-          >
-            Book Now
-          </button>
+
+          <a href="#tour-search"  data-nav-link class="btn btn-primary"
+          > Book Now</a
+        >
+
+        
         </div>
       </div>
     </header>
@@ -170,8 +175,9 @@
 
             <div class="btn-group">
               <button class="btn btn-primary">Learn more</button>
-
-              <button class="btn btn-secondary">Book now</button>
+              <a href="#tour-search"  data-nav-link class="btn btn-primary"
+              > Book Now</a
+            >
             </div>
           </div>
         </section>
@@ -180,9 +186,9 @@
         - #TOUR SEARCH
       -->
 
-        <section class="tour-search">
+        <section class="tour-search" id="tour-search">
           <div class="container">
-            <form action="" class="tour-search-form">
+            <form action="" class="tour-search-form" id="tour-search">
               <div class="input-wrapper">
                 <label for="destination" class="input-label"
                   >Search Destination*</label
@@ -263,7 +269,7 @@
                 <div class="popular-card">
                   <figure class="card-img">
                     <img
-                      src="./assets/images/popular-1.jpg"
+                      src="/assets/images/popular-1.jpg"
                       alt="San miguel, italy"
                       loading="lazy"
                     />
@@ -299,7 +305,7 @@
                 <div class="popular-card">
                   <figure class="card-img">
                     <img
-                      src="./assets/images/popular-2.jpg"
+                      src="/assets/images/popular-2.jpg"
                       alt="Burj khalifa, dubai"
                       loading="lazy"
                     />
@@ -335,7 +341,7 @@
                 <div class="popular-card">
                   <figure class="card-img">
                     <img
-                      src="./assets/images/popular-3.jpg"
+                      src="/assets/images/popular-3.jpg"
                       alt="Kyoto temple, japan"
                       loading="lazy"
                     />
@@ -394,7 +400,7 @@
                 <div class="package-card">
                   <figure class="card-banner">
                     <img
-                      src="./assets/images/packege-1.jpg"
+                      src="/assets/images/packege-1.jpg"
                       alt="Experience The Great Holiday On Beach"
                       loading="lazy"
                     />
@@ -466,7 +472,7 @@
                 <div class="package-card">
                   <figure class="card-banner">
                     <img
-                      src="./assets/images/packege-2.jpg"
+                      src="/assets/images/packege-2.jpg"
                       alt="Summer Holiday To The Oxolotan River"
                       loading="lazy"
                     />
@@ -538,7 +544,7 @@
                 <div class="package-card">
                   <figure class="card-banner">
                     <img
-                      src="./assets/images/packege-3.jpg"
+                      src="/assets/images/packege-3.jpg"
                       alt="Santorini Island's Weekend Vacation"
                       loading="lazy"
                     />
@@ -632,7 +638,7 @@
               <li class="gallery-item">
                 <figure class="gallery-image">
                   <img
-                    src="./assets/images/gallery-1.jpg"
+                    src="/assets/images/gallery-1.jpg"
                     alt="Gallery image"
                   />
                 </figure>
@@ -641,7 +647,7 @@
               <li class="gallery-item">
                 <figure class="gallery-image">
                   <img
-                    src="./assets/images/gallery-2.jpg"
+                    src="/assets/images/gallery-2.jpg"
                     alt="Gallery image"
                   />
                 </figure>
@@ -650,7 +656,7 @@
               <li class="gallery-item">
                 <figure class="gallery-image">
                   <img
-                    src="./assets/images/gallery-3.jpg"
+                    src="/assets/images/gallery-3.jpg"
                     alt="Gallery image"
                   />
                 </figure>
@@ -659,7 +665,7 @@
               <li class="gallery-item">
                 <figure class="gallery-image">
                   <img
-                    src="./assets/images/gallery-4.jpg"
+                    src="/assets/images/gallery-4.jpg"
                     alt="Gallery image"
                   />
                 </figure>
@@ -668,7 +674,7 @@
               <li class="gallery-item">
                 <figure class="gallery-image">
                   <img
-                    src="./assets/images/gallery-5.jpg"
+                    src="/assets/images/gallery-5.jpg"
                     alt="Gallery image"
                   />
                 </figure>
@@ -715,7 +721,7 @@
         <div class="container">
           <div class="footer-brand">
             <a href="#" class="logo">
-              <img src="./assets/images/logo.svg" alt="Tourly logo" />
+              <img src="/assets/images/logo.svg" alt="Tourly logo" />
             </a>
 
             <p class="footer-text">
@@ -779,7 +785,7 @@
       <div class="footer-bottom">
         <div class="container">
           <p class="copyright">
-            &copy; 2025 <a href="">codewithsadee</a>. All rights reserved
+            &copy; 2025 <a href=""></a>. All rights reserved
           </p>
 
           <ul class="footer-bottom-list">

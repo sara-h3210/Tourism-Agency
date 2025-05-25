@@ -1,4 +1,35 @@
-const API_BASE_URL = "http://localhost:3000/api"; // or your actual base URL
+/*"use strict";
+
+const ToursManager = (function () {
+    const API_BASE_URL = "http://localhost:3000/api";
+    const SELECTORS = {
+        TABLE_BODY: ".booking-table tbody",
+        MODAL: "#addTourModal",
+        MODAL_TITLE: "#modalTitle",  // Add this line
+        ADD_BTN: ".btn-primary",
+        CLOSE_BTN: "#closeModal",
+        FORM: "#tourForm",
+        IMAGE_INPUT: "#packageImage",
+        IMAGE_PREVIEW: "#imagePreview",
+        PREVIEW_IMAGE: "#previewImage",
+        TITLE_INPUT: "#tourTitle",
+        DESTINATION_INPUT: "#Destination",
+        ITINERARY_INPUT: "#itinerary",
+        DURATION_INPUT: "#Duration", // Add this
+        SLOTS_AVAILABLE_INPUT: "#slotsAvailable", // Add this
+        DESCRIPTION_INPUT: "#description",
+        PRICE_INPUT: "#price",
+        STATUS_SELECT: "#status"
+    };
+
+    const DEFAULTS = {
+        FALLBACK_IMAGE: "/assets/images/gallery-1.jpg",
+        STATUS_CLASSES: {
+            active: "active",
+            inactive: "inactive"
+        }
+    };
+
 document.addEventListener('DOMContentLoaded', function () {
     const bookingsTableBody = document.getElementById('bookings-table-body');
 
@@ -11,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Fetch ALL bookings (no query parameters)
             const response = await fetch(`${API_BASE_URL}/bookings`);
 
-            if (!response.ok) throw new Error(`Failed to load: ${response.status}`);
+            if (!response.ok)  throw new Error(`Failed to load: ${response.status}`);
 
             const data = await response.json();
 
@@ -34,14 +65,14 @@ document.addEventListener('DOMContentLoaded', function () {
         bookings.forEach(booking => {
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td>${booking.BOOKING_ID}</td>
-                <td>${booking.CUSTOMER_NAME}</td>
-                <td>${booking.PACKAGE_TITLE}</td>
-                <td>${formatDate(booking.BOOKING_DATE)}</td>
-                <td>${formatDate(booking.TRAVEL_DATE)}</td>
-                <td>${booking.PARTICIPANTS}</td>
-                <td>$${booking.TOTAL_AMOUNT?.toFixed(2) || '0.00'}</td>
-                <td><span class="status-badge ${booking.STATUS?.toLowerCase()}">${capitalizeFirstLetter(booking.STATUS)}</span></td>
+                <td>${booking.booking_id}</td>
+                <td>${booking.customer_id}</td>
+                <td>${booking.package_id}</td>
+                <td>${formatDate(booking.booking_date)}</td>
+                <td>${formatDate(booking.travel_date)}</td>
+                <td>${booking.participants}</td>
+                <td>$${booking.total_amount?.toFixed(2) || '0.00'}</td>
+                <td><span class="status-badge ${booking.status?.toLowerCase()}">${capitalizeFirstLetter(booking.status)}</span></td>
                 <td>
                     <select class="status-select" data-booking-id="${booking.BOOKING_ID}">
                         <option value="pending" ${booking.STATUS === 'PENDING' ? 'selected' : ''}>Pending</option>
@@ -95,4 +126,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initialize
     loadBookings();
-});
+});*/

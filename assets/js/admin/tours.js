@@ -468,7 +468,7 @@ const ToursManager = (function () {
                     <td>${tour.title || 'Untitled Tour'}</td>
                     <td>${tour.destination || 'No destination'}</td>
                     <td>${tour.duration + 'days' || '-'}</td>
-                    <td>${tour.price ? `$${parseFloat(tour.price).toFixed(2)}` : 'N/A'}</td>
+                    <td>${tour.price ? `${parseFloat(tour.price).toFixed(2)}DA` : 'N/A'}</td>
                     <td>${tour.slots_available || 0}</td>
                     <td>
                         <span class="status-badge ${tour.STATUS === 'active' ? 'active' : 'inactive'}">

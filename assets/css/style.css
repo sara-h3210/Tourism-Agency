@@ -2015,3 +2015,31 @@ address {
   height: 3px;
   background: var(--bright-navy-blue);
 }
+
+/* Login Button with Lock Icon */
+.login-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--white);
+  background: hsla(0, 0%, 100%, 0.1);
+  border: none;
+  border-radius: 50px;
+  padding: 8px 15px;
+  font-size: var(--fs-6);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.login-btn ion-icon {
+  font-size: 18px;
+  transition: var(--transition);
+}
+
+.login-btn:hover {
+  background: var(--bright-navy-blue);
+}
+
+.login-btn:hover ion-icon {
+  transform: translateY(-2px);
+}
